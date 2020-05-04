@@ -21,7 +21,20 @@ public class Cube_Logic : MonoBehaviour
         if(mesh_renderer)
         {
             Color color = Random.ColorHSV();
+            mesh_renderer.sharedMaterial.color = Random.ColorHSV();
+        }
+    }
+
+    public void SetColor(Color color)
+    {
+        MeshRenderer mesh_renderer = GetComponent<MeshRenderer>();
+        if(mesh_renderer)
+        {
             mesh_renderer.sharedMaterial.color = color;
         }
+    }
+    public void setsize(float size)
+    {
+        transform.localScale = Vector3.one * size;
     }
 }
